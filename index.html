@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 21 Lounge | Menu Complet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        :root {
+            --gold: #C5A059;
+            --dark: #000000;
+            --card-bg: #121212;
+            --text-gray: #b0b0b0;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--dark); font-family: 'Montserrat', sans-serif; color: white; line-height: 1.6; }
+
+        header {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(./21.jpg) center/cover;
+            display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .logo-text { font-family: 'Playfair Display', serif; font-size: 4rem; color: var(--gold); letter-spacing: 5px; }
+
+        .nav-container {
+            position: sticky; top: 0; background: rgba(0,0,0,0.95); z-index: 1000;
+            padding: 15px; border-bottom: 1px solid #222; overflow-x: auto; white-space: nowrap;
+        }
+
+        .nav-container a {
+            color: white; text-decoration: none; margin: 0 15px; font-size: 0.8rem; text-transform: uppercase;
+            letter-spacing: 1px; transition: var(--transition);
+        }
+
+        .nav-container a:hover { color: var(--gold); }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+
+        .menu-section { margin-bottom: 60px; scroll-margin-top: 80px; }
+        .section-title {
+            font-family: 'Playfair Display', serif; font-size: 2.2rem; color: var(--gold);
+            text-align: center; margin-bottom: 30px; display: flex; align-items: center; justify-content: center; gap: 20px;
+        }
+        .section-title::before, .section-title::after { content: ""; height: 1px; width: 50px; background: var(--gold); }
+
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+
+        .item {
+            background: var(--card-bg); padding: 20px; border-radius: 8px;
+            display: flex; justify-content: space-between; align-items: flex-start;
+            border-left: 0 solid var(--gold); transition: var(--transition);
+        }
+        .item:hover { border-left-width: 5px; transform: translateX(5px); }
+
+        .item-info { flex-grow: 1; padding-right: 15px; }
+        .item-name { font-weight: 600; text-transform: uppercase; font-size: 0.95rem; display: block; }
+        .item-desc { font-size: 0.8rem; color: var(--text-gray); font-style: italic; }
+        .item-price { color: var(--gold); font-family: 'Playfair Display', serif; font-weight: 700; white-space: nowrap; }
+
+        footer { background: #080808; padding: 50px 20px; text-align: center; border-top: 1px solid #222; }
+        .info-box { margin-bottom: 20px; color: var(--text-gray); }
+        .gold-btn {
+            display: inline-block; padding: 12px 30px; border: 1px solid var(--gold);
+            color: var(--gold); text-decoration: none; border-radius: 50px; transition: var(--transition);
+        }
+        .gold-btn:hover { background: var(--gold); color: black; }
+
+        @media (max-width: 600px) { .logo-text { font-size: 2.5rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-text">THE 21</div>
+        <p style="color: var(--gold); letter-spacing: 3px;">LOUNGE • COFFEE • RESTO</p>
+    </header>
+
+    <div class="nav-container">
+        <a href="#petit-dej">Petit Déj</a>
+        <a href="#cafe-the">Café & Thé</a>
+        <a href="#boissons">Boissons</a>
+        <a href="#plats">Plats</a>
+        <a href="#pizza">Pizza</a>
+        <a href="#pasta">Pasta</a>
+        <a href="#crepes">Crêpes</a>
+    </div>
+
+    <div class="container">
+
+        <section id="petit-dej" class="menu-section">
+            <h2 class="section-title">Petit-Déjeuner</h2>
+            <div class="menu-grid">
+                <div class="item"><div class="item-info"><span class="item-name">Good morning</span><span class="item-desc">Café, croissant, mini jus, eau</span></div><span class="item-price">9.000 DT</span></div>
+                <div class="item"><div class="item-info"><span class="item-name">Express</span><span class="item-desc">Café, croissant, mini jus, toast, beurre, confiture, eau</span></div><span class="item-price">12.500 DT</span></div>
+                <div class="item"><div class="item-info"><span class="item-name">Fast</span><span class="item-desc">Café, croissant, mini jus, omelette, eau</span></div><span class="item-price">15.000 DT</span></div>
+                <div class="item"><div class="item-info"><span class="item-name">So Kids</span><span class="item-desc">Chocolat au lait, céréales, œuf, mini crêpe sucrée, mini jus, surprise</span></div><span class="item-price">16.000 DT</span></div>
+                <div class="item"><div class="item-info"><span class="item-name">Healthy</span><span class="item-desc">Café, granola, yaourt, pain complet, œuf, jambons, fromage, fruits, eau</span></div><span class="item-price">20.000 DT</span></div>
+                <div class="item"><div class="item-info"><span class="item-name">Half and Half (Duo)</span><span class="item-desc">Café, croissant, jus, beurre, confiture, chocolat, chamia, mini gaufre, pancakes, omelette...</span></div><span class="item-price">26.000 DT</span></div>
+                <div class="item"><div class="item-info"><span class="item-name">L'idéal (New)</span><span class="item-desc">Café, jus, salade, yaourt fruit granola, gaufre au miel, toast avocat, saumon, goutta...</span></div><span class="item-price">35.000 DT</span></div>
+                <div class="item"><div class="item-info"><span class="item-name">Tounsi (Duo)</span><span class="item-desc">2 Cafés, chamia, dattes, bsisa, goutta, salami, hrissa, mergez, tastira, ojja, mlaoui...</span></div><span class="item-price">40.000 DT</span></div>
+                <div class="item"><div class="item-info"><span class="item-name">The 21 (Duo)</span><span class="item-desc">Menu complet royal avec 2 cafés, croissants, batbout, frites, calamar, brochettes, zgougou, gateaux...</span></div><span class="item-price">49.000 DT</span></div>
+            </div>
+        </section>
+
+        <section id="cafe-the" class="menu-section">
+            <h2 class="section-title">Barista</h2>
+            <div class="menu-grid">
+                <div class="item"><span class="item-name">Express</span><span class="item-price">4.500 DT</span></div>
+                <div class="item"><span class="item-name">Chocolat au lait</span><span class="item-price">5.000 DT</span></div>
+                <div class="item"><span class="item-name">Nescafe au lait</span><span class="item-price">5.000 DT</span></div>
+                <div class="item"><span class="item-name">cafe americain</span><span class="item-price">5.000 DT</span></div>
+                <div class="item"><span class="item-name">Capucin</span><span class="item-price">5.800 DT</span></div>
+                <div class="item"><span class="item-name">express special</span><span class="item-price">6.000 DT</span></div>
+                <div class="item"><span class="item-name">Direct</span><span class="item-price">6.500 DT</span></div>
+                <div class="item"><span class="item-name">capucin special</span><span class="item-price">7.000 DT</span></div>
+                <div class="item"><span class="item-name">Direct special</span><span class="item-price">8.000 DT</span></div>
+                <div class="item"><span class="item-name">Cappuccino</span><span class="item-price">8.000 DT</span></div>
+                <div class="item"><span class="item-name">Cappuccino Spécial</span><span class="item-price">10.000 DT</span></div>
+                <div class="item"><span class="item-name">Thé à la menthe</span><span class="item-price">5.000 DT</span></div>
+                <div class="item"><span class="item-name">Thé infusion</span><span class="item-price">7.000 DT</span></div>
+                <div class="item"><span class="item-name">Thé aux amandes</span><span class="item-price">9.000 DT</span></div>
+                <div class="item"><span class="item-name">Thé aux pignons</span><span class="item-price">12.000 DT</span></div>
+                <div class="item"><div class="item-info"><span class="item-name">Thé Baklawa</span><span class="item-desc">Fruits secs</span></div><span class="item-price">14.000 DT</span></div>
+                <div class="item"><div class="item-info"><span class="item-name">cafe turc</span><span class="item-desc">Preparé dans le sable chaud</span></div><span class="item-price">15.000 DT</span></div>
+                <div class="item"><div class="item-info"><span class="item-name">Aromes et Supplements</span><span class="item-desc">caramel,noisette,vanille,cookies,chantilly,nestlé : 4.000DT <br> amandes : 5.000DT <br> pignons : 7.000DT</span></div></div>
+            </div>
+        </section>
+
+        <section id="plats" class="menu-section">
+            <h2 class="section-title">Nos Plats</h2>
+            <div class="menu-grid">
+                <div class="item"><span class="item-name">Escalope Grillée</span><span class="item-price">23.000 DT</span></div>
+                <div class="item"><span class="item-name">Escalope Panée</span><span class="item-price">25.000 DT</span></div>
+                <div class="item"><span class="item-name">Cordon Bleu</span><span class="item-price">27.000 DT</span></div>
+                <div class="item"><span class="item-name">Escalope sauce champignon</span><span class="item-price">28.000 DT</span></div>
+                <div class="item"><span class="item-name">Kebab Royal</span><span class="item-price">35.000 DT</span></div>
+                <div class="item"><span class="item-name">Filet Grillé</span><span class="item-price">40.000 DT</span></div>
+                <div class="item"><span class="item-name">Filet à la crème</span><span class="item-price">45.000 DT</span></div>
+                <div class="item"><span class="item-name">Grillade Mixte</span><span class="item-price">45.000 DT</span></div>
+            </div>
+        </section>
+
+        <section id="pizza" class="menu-section">
+            <h2 class="section-title">Pizzas</h2>
+            <div class="menu-grid">
+                <div class="item"><span class="item-name">Pizza Végétarienne</span><span class="item-price">18.000 DT</span></div>
+                <div class="item"><span class="item-name">Pizza Pepperoni</span><span class="item-price">18.000 DT</span></div>
+                <div class="item"><span class="item-name">Pizza Neptune</span><span class="item-price">20.000 DT</span></div>
+                <div class="item"><span class="item-name">Pizza 4 Saisons</span><span class="item-price">22.000 DT</span></div>
+                <div class="item"><span class="item-name">Pizza Burrata</span><span class="item-price">24.000 DT</span></div>
+                <div class="item"><span class="item-name">Pizza 4 Fromages</span><span class="item-price">25.000 DT</span></div>
+                <div class="item"><span class="item-name">Pizza Fruits de mer</span><span class="item-price">28.000 DT</span></div>
+                <div class="item"><span class="item-name">Pizza Double Pâte</span><span class="item-price">29.000 DT</span></div>
+                <div class="item"><span class="item-name">Pizza Norvégienne</span><span class="item-price">32.000 DT</span></div>
+            </div>
+        </section>
+
+        <section id="pasta" class="menu-section">
+            <h2 class="section-title">Pasta & Ravioli</h2>
+            <div class="menu-grid">
+                <div class="item"><span class="item-name">Carbonara / Bolognoise</span><span class="item-price">22.000 DT</span></div>
+                <div class="item"><span class="item-name">Alfredo (Escalope)</span><span class="item-price">22.000 DT</span></div>
+                <div class="item"><span class="item-name">Lasagne Chevrettes</span><span class="item-price">24.000 DT</span></div>
+                <div class="item"><span class="item-name">Penne Fruits de mer</span><span class="item-price">32.000 DT</span></div>
+                <div class="item"><span class="item-name">Ravioli 4 Fromages</span><span class="item-price">24.000 DT</span></div>
+                <div class="item"><span class="item-name">Ravioli Viande Hachée</span><span class="item-price">26.000 DT</span></div>
+            </div>
+        </section>
+
+        <section id="crepes" class="menu-section">
+            <h2 class="section-title">Crêpes</h2>
+            <div class="menu-grid">
+                <div class="item"><span class="item-name">Crêpe Nutella / Banane</span><span class="item-price">12.000 DT</span></div>
+                <div class="item"><span class="item-name">Crêpe Spéculoos / Pistache</span><span class="item-price">16.000 DT</span></div>
+                <div class="item"><span class="item-name">Crêpe Makis (Banane, nutella, pistache)</span><span class="item-price">18.000 DT</span></div>
+                <div class="item"><span class="item-name">Crêpe THE 21 (Spéciale)</span><span class="item-price">20.000 DT</span></div>
+                <div class="item"><span class="item-name">Crêpe Thon Fromage</span><span class="item-price">12.000 DT</span></div>
+                <div class="item"><span class="item-name">Crêpe Mexicaine (Viande hachée)</span><span class="item-price">18.000 DT</span></div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="info-box">
+            <p><i class="fas fa-map-marker-alt"></i> Boumhel El Bassatine Ben Arous, Ezzahra, 2097</p>
+            <p><i class="fas fa-phone"></i> 53 090 509</p>
+        </div>
+        <a href="tel:53090509" class="gold-btn">Appeler pour commander</a>
+    </footer>
+
+</body>
+</html>
